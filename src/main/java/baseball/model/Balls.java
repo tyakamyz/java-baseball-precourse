@@ -7,7 +7,6 @@ public class Balls {
 
     static final int BALLS_COUNT = 3;
     public List<Ball> balls;
-    public BallStatus ballStatus;
 
     public Balls() {
         balls = new ArrayList<>();

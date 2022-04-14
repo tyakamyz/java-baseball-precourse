@@ -22,8 +22,16 @@ public class Ball {
         }
     }
 
-    public int getNumber() {
-        return number;
+    public BallStatus.Status compareBall(Ball ball) {
+        if(this.equals(ball)){
+            return BallStatus.Status.STRIKE;
+        }
+
+        if(this.number == ball.number){
+            return BallStatus.Status.BALL;
+        }
+
+        return BallStatus.Status.NOTHING;
     }
 
     @Override
