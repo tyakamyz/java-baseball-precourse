@@ -12,5 +12,6 @@ class BallsTest {
     @Test
     void addBalls_예외테스트() {
         assertThatThrownBy(() -> new Balls().addBalls(new ArrayList<>(Arrays.asList(1,2,3,4)))).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> new Balls().addBalls(new ArrayList<>(Arrays.asList(1,1,2)))).isInstanceOf(IllegalArgumentException.class);
     }
 }
