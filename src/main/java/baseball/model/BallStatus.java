@@ -27,13 +27,13 @@ public class BallStatus {
         this.ballCount++;
     }
 
-    public int getStrikeCount() {
+    /*public int getStrikeCount() {
         return strikeCount;
     }
 
     public int getBallCount() {
         return ballCount;
-    }
+    }*/
 
     public String resultScoreReport(){
 
