@@ -13,6 +13,12 @@ public class InputView {
     /* 게임 시작 종료 선택 */
     public static int InputGameStartOrEnd() {
         ResultView.gameRestartOrEndMessage();
-        return Integer.parseInt(readLine());
+
+        String inputStr = readLine();
+        if("1".equals(inputStr) || "2".equals(inputStr)){
+            return Integer.parseInt(inputStr);
+        }
+
+        throw new IllegalArgumentException("잘못된 입력 값. 강제 종료 합니다.");
     }
 }
