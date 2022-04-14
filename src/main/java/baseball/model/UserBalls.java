@@ -3,7 +3,7 @@ package baseball.model;
 public class UserBalls extends Balls{
     public BallStatus ballStatus;
 
-    public UserBalls(){
+    UserBalls(){
         this.ballStatus = new BallStatus();
     }
 

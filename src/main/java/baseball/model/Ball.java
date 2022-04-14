@@ -3,8 +3,8 @@ package baseball.model;
 import java.util.Objects;
 
 public class Ball {
-    private final int MIN_NUMBER_COUNT = 1;
-    private final int MAX_NUMBER_COUNT = 9;
+    public static final int MIN_NUMBER_COUNT = 1;
+    public static final int MAX_NUMBER_COUNT = 9;
 
     private final int round;
     private final int number;
