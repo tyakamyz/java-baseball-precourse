@@ -17,6 +17,7 @@
 * [x] 결과 비교
   * [x] Strike
   * [x] Ball
-  * [ ] Nothing
+  * [x] Nothing
+* [x] 결과 출력
 * [ ] 결과 확인
 * [ ] 게임 종료 또는 반복 실행 처리
