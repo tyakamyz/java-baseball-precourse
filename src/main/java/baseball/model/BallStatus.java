@@ -1,5 +1,7 @@
 package baseball.model;
 
+import baseball.view.ResultView;
+
 public class BallStatus {
     public enum Status {STRIKE, BALL, NOTHING}
 
@@ -36,17 +38,17 @@ public class BallStatus {
     public String resultScoreReport(){
 
         if(this.strikeCount == 0 && this.ballCount == 0){
-            return "낫싱";
+            return ResultView.NOTHING;
         }
 
         if(this.strikeCount == 0){
-            return this.ballCount + "볼";
+            return this.ballCount + ResultView.BALL;
         }
 
         if(this.ballCount == 0){
-            return this.strikeCount + "스트라이크";
+            return this.strikeCount + ResultView.STRIKE;
         }
 
-        return this.ballCount + "볼 " + this.strikeCount + "스트라이크";
+        return this.ballCount + ResultView.BALL + " " + this.strikeCount + ResultView.STRIKE;
     }
 }
