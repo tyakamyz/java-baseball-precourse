@@ -6,7 +6,7 @@ import java.util.List;
 import static camp.nextstep.edu.missionutils.Randoms.pickNumberInRange;
 
 public class AnswerBalls extends Balls{
-    AnswerBalls(){
+    public AnswerBalls(){
         createRandomBalls();
     }
 

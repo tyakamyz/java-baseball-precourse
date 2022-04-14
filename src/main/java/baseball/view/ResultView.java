@@ -9,4 +9,16 @@ public class ResultView {
     public final static String STRIKE = "스트라이크";
     public final static String BALL = "볼";
     public final static String NOTHING = "낫싱";
+
+    public static void inputNumberMessage(){
+        System.out.println(INPUT_NUMBER);
+    }
+
+    public static void gameRestartOrEndMessage(){
+        System.out.println(GAME_RESTART_OR_END);
+    }
+
+    public static void gameEndMessage(){
+        System.out.println(GAME_END);
+    }
 }

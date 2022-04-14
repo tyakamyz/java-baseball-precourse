@@ -51,4 +51,8 @@ public class BallStatus {
 
         return this.ballCount + ResultView.BALL + " " + this.strikeCount + ResultView.STRIKE;
     }
+
+    public boolean isEndGame() {
+        return this.strikeCount == 3;
+    }
 }
