@@ -29,6 +29,14 @@ class ApplicationTest extends NsTest {
     }
 
     @Test
+    void 유효성_체크_예외_테스트() {
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("1-23"))
+                        .isInstanceOf(IllegalArgumentException.class)
+        );
+    }
+
+    @Test
     void 예외_테스트_종료시_잘못된_값() {
         assertThatThrownBy(() -> assertRandomNumberInRangeTest(
         () -> {
