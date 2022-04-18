@@ -10,9 +10,13 @@ public class UserBalls extends Balls{
     public void compareBalls(Balls anwerBalls){
 
         for(Ball userBall : this.balls){
-            for(Ball anwerBall : anwerBalls.balls){
-                this.ballStatus.addStatusCount(userBall.compareBall(anwerBall));
-            }
+            compareBall(anwerBalls, userBall);
+        }
+    }
+
+    private void compareBall(Balls anwerBalls, Ball userBall) {
+        for(Ball anwerBall : anwerBalls.balls){
+            this.ballStatus.addStatusCount(userBall.compareBall(anwerBall));
         }
     }
 }
