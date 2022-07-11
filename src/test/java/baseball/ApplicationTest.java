@@ -28,6 +28,25 @@ class ApplicationTest extends NsTest {
         );
     }
 
+    @Test
+    void 유효성_체크_예외_테스트() {
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("1-23"))
+                        .isInstanceOf(IllegalArgumentException.class)
+        );
+    }
+
+    @Test
+    void 예외_테스트_종료시_잘못된_값() {
+        assertThatThrownBy(() -> assertRandomNumberInRangeTest(
+        () -> {
+            run("246", "135", "1", "597", "589", "5");
+            assertThat(output()).contains("낫싱", "3스트라이크", "1볼 1스트라이크", "3스트라이크", "게임 종료");
+        },
+        1, 3, 5, 5, 8, 9)
+        ).isInstanceOf(IllegalArgumentException.class);
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
